@@ -48,7 +48,6 @@ let folderNameArray = [];
 // 숫자폴더안에 있는 파일명들 격납
 let fileNameArray = [];
 
-
 async function googleDrive(folderName) {
 
     folderNameArray = await getFolderName();
