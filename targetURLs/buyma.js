@@ -194,7 +194,7 @@ async function buyma(row) {
     if (errData) throw new SyntaxError(errData);
 
     //(状態) 변경
-    row.status = '上書き完了';
+    row.status = '下書き完了';
     await row.save(); // save changes
 
     await page.close();
