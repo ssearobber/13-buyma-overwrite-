@@ -25,16 +25,16 @@ const oauth2Client = new google.auth.OAuth2(
 //   console.log("REFRESH_TOKEN 새로운 토큰");
 // });
 
-// oAuth2Client.refreshAccessToken((error, tokens) => {
-//   console.log('refreshAccessToken', tokens);
-//   REFRESH_TOKEN = tokens
+oauth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
+
+// access token 획득
+// oauth2Client.refreshAccessToken((error, tokens) => {
+//   console.dir('refreshAccessToken', tokens);
 
 //   if (error) {
 //     console.log('error ',error);
 //   }
 // })
-
-oauth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
 
 const drive = google.drive({
   version: 'v3',
